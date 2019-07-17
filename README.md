@@ -1,8 +1,8 @@
-## nlp-tutorial
+## nlp-tutorial-selfextension
 
-<p align="center"><img width="100" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/TensorFlowLogo.svg/225px-TensorFlowLogo.svg.png" />  <img width="100" src="https://media-thumbs.golden.com/OLqzmrmwAzY1P7Sl29k2T9WjJdM=/200x200/smart/golden-storage-production.s3.amazonaws.com/topic_images/e08914afa10a4179893eeb07cb5e4713.png" /></p>
-
-`nlp-tutorial` is a tutorial for who is studying NLP(Natural Language Processing) using **TensorFlow** and **Pytorch**. Most of the models in NLP were implemented with less than **100 lines** of code.(except comments or blank lines)
+### 原作者github链接 https://github.com/graykode/nlp-tutorial
+### 此版本为 在原作者的项目基础上添加注释/代码修改/增加阅读论文资料的扩充版本
+### 本人新手入门，更新的过程也是自己学习的过程，学到哪儿更到哪儿，修改后的代码和注释写的很烂，而且有错，仅为标注和自己思考使用。请旁人慎看，介意跟我一样的新手玩家去访问原作者的github地址自己慢慢理解写自己能读懂的注释。靴靴❤️
 
 
 
