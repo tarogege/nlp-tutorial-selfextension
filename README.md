@@ -3,6 +3,7 @@
 ### 原作者github链接 https://github.com/graykode/nlp-tutorial
 ### 此版本为 在原作者的项目基础上添加注释🎉/代码修改👏/增加阅读资料🌼的扩充版本
 ### 本人新手入门，更新的过程也是自己学习的过程，学到哪儿更到哪儿，修改后的代码和注释写的很烂，而且有错，仅为标注和自己思考使用。请旁人慎看，建议跟我一样的新手玩家去访问原作者的github地址自己慢慢理解写自己能读懂的注释。靴靴❤️
+### 更新进度 -NNLM
 
 
 
@@ -16,6 +17,7 @@
 - 1-2. [Word2Vec(Skip-gram)](https://github.com/graykode/nlp-tutorial/tree/master/1-2.Word2Vec) - **Embedding Words and Show Graph**
   - Paper - [Distributed Representations of Words and Phrases
     and their Compositionality(2013)](https://papers.nips.cc/paper/5021-distributed-representations-of-words-and-phrases-and-their-compositionality.pdf)
+    word2vec explaination:( https://arxiv.org/pdf/1402.3722.pdf)
   - Colab - [Word2Vec_Tensor(NCE_loss).ipynb](https://colab.research.google.com/github/graykode/nlp-tutorial/blob/master/1-2.Word2Vec/Word2Vec_Skipgram_Tensor(NCE_loss).ipynb), [Word2Vec_Tensor(Softmax).ipynb](https://colab.research.google.com/github/graykode/nlp-tutorial/blob/master/1-2.Word2Vec/Word2Vec_Skipgram_Tensor(Softmax).ipynb), [Word2Vec_Torch(Softmax).ipynb](https://colab.research.google.com/github/graykode/nlp-tutorial/blob/master/1-2.Word2Vec/Word2Vec_Skipgram_Torch(Softmax).ipynb)
 - 1-3. [FastText(Application Level)](https://github.com/graykode/nlp-tutorial/tree/master/1-3.FastText) - **Sentence Classification**
   - Paper - [Bag of Tricks for Efficient Text Classification(2016)](https://arxiv.org/pdf/1607.01759.pdf)

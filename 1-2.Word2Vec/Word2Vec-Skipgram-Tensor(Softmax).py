@@ -8,6 +8,7 @@ import numpy as np
 tf.reset_default_graph()
 
 # 3 Words Sentence
+# 词语预处理/分词/去重，构建索引
 sentences = [ "i like dog", "i like cat", "i like animal",
               "dog cat animal", "apple cat dog like", "dog fish milk like",
               "dog cat eyes like", "i like apple", "apple i hate",
@@ -19,6 +20,7 @@ word_list = list(set(word_list))
 word_dict = {w: i for i, w in enumerate(word_list)}
 
 # Word2Vec Parameter
+# batch_size 含义：（将文本数据映射为skit-gram数组包含target和context词），batch-size从skip-gram数组中取出 对应大小的 UV对，这里取出了20对
 batch_size = 20
 embedding_size = 2 # To show 2 dim embedding graph
 voc_size = len(word_list)
@@ -36,14 +38,19 @@ def random_batch(data, size):
 
 # Make skip gram of one size window
 skip_grams = []
+# 从第二个词到倒数第二个词
 for i in range(1, len(word_sequence) - 1):
+    # target：每个词i对应的下标 context 窗口大小为1 的上下文的下标
+    # 在nlp中，通常把词汇表的下标当成输入量进行计算
     target = word_dict[word_sequence[i]]
     context = [word_dict[word_sequence[i - 1]], word_dict[word_sequence[i + 1]]]
 
     for w in context:
         skip_grams.append([target, w])
 
-# Model
+# Model 定义输入占位符/变量/session
+# inputs初始化为独热码，最后转化为定长密集的词向量，长度为embedding_size
+# skip-gram分别维护了两个词嵌入矩阵：[U(核心词矩阵) 对应代码中的inputs],[V（上下文词矩阵）对应代码中的labels]，最后的词嵌入为两者的平均
 inputs = tf.placeholder(tf.float32, shape=[None, voc_size])
 labels = tf.placeholder(tf.float32, shape=[None, voc_size])
 
@@ -62,13 +69,15 @@ with tf.Session() as sess:
     sess.run(init)
 
     for epoch in range(5000):
+        # 每次循环都重新随机取20（batch-size）对核心词及其上下文
         batch_inputs, batch_labels = random_batch(skip_grams, batch_size)
         _, loss = sess.run([optimizer, cost], feed_dict={inputs: batch_inputs, labels: batch_labels})
 
         if (epoch + 1)%1000 == 0:
             print('Epoch:', '%04d' % (epoch + 1), 'cost =', '{:.6f}'.format(loss))
 
-        trained_embeddings = W.eval()
+        trained_embeddings = W.eval()    
+    print('finished:')
 
 for i, label in enumerate(word_list):
     x, y = trained_embeddings[i]
