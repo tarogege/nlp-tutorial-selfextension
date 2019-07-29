@@ -38,6 +38,7 @@
 
 - 3-1. [TextRNN](https://github.com/graykode/nlp-tutorial/tree/master/3-1.TextRNN) - **Predict Next Step**
   - Paper - [Finding Structure in Time(1990)](http://psych.colorado.edu/~kimlab/Elman1990.pdf)
+  - Paper extension(recommend) - [A Critical Review of Recurrent Neural Networks for Sequence Learning(RNN综述类文献，描述清晰易懂)](https://arxiv.org/pdf/1506.00019.pdf)
   - Colab - [TextRNN_Tensor.ipynb](https://colab.research.google.com/github/graykode/nlp-tutorial/blob/master/3-1.TextRNN/TextRNN_Tensor.ipynb), [TextRNN_Torch.ipynb](https://colab.research.google.com/github/graykode/nlp-tutorial/blob/master/3-1.TextRNN/TextRNN_Torch.ipynb)
 - 3-2. [TextLSTM](https://github.com/graykode/nlp-tutorial/tree/master/3-2.TextLSTM) - **Autocomplete**
   - Paper - [LONG SHORT-TERM MEMORY(1997)](https://www.bioinf.jku.at/publications/older/2604.pdf)
